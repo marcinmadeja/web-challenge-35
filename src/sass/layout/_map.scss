@@ -1,0 +1,35 @@
+.s-map {
+  @extend %flex-center;
+  
+  background: url('../img/map-bg.jpg');
+  height: 200px;
+  margin-bottom: em(75px);
+
+  &__title {
+    color: $font-color-highliht;
+    font-size: em(27px);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+
+      background: url('../img/ico-marker.png');
+      display: block;
+      height: 26px;
+      margin: 0 auto em(7px);
+      width: 20px;
+    }
+
+    &::after {
+      content: '';
+
+      width: 60px;
+      height: 3px;
+      margin: em(12px) auto 0;
+      display: block;
+      background: #f38180;
+    }
+  }
+}

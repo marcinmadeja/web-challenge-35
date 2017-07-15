@@ -1,0 +1,44 @@
+.s-design {
+  height: em(850px);
+  background: url('../img/desing-bg.jpg') center center/cover;
+  position: relative;
+
+  @include breakpoint($tablet-landscape) {
+    height: em(670px);
+  }
+
+  @include breakpoint($phone-only) {
+  height: em(500px);
+  }
+
+  &__devices-wrap {
+    width: em(477px);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%,0);
+
+    @include breakpoint($tablet-landscape) {
+      font-size: 9px;
+    }
+    
+    @include breakpoint($phone-only) {
+      font-size: 5px;
+    }     
+  }
+
+  &__tablet {
+    width: 100%;
+    display: block;
+  }
+
+  &__phone {
+    width: em(274px);
+
+    position: absolute;
+    bottom: em(-90px);
+    right: em(-160px);
+  }
+}

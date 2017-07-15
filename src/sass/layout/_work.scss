@@ -1,0 +1,81 @@
+.s-logos {
+  margin-top: em(76px);
+  margin-bottom: em(76px);
+}
+
+
+.s-work {
+  &__gallery {
+    @include clearfix;
+
+    font-size: 0;
+  }
+
+  &__gallery-col-6 {
+    @include breakpoint($phone-only-up) {
+      @include with-layout(12 split inside no-gutters) {
+        @include span(6);
+      }
+      @include clearfix;
+    }
+  }
+
+  &__gallery-item {
+    display:inline-block;
+    vertical-align: middle;
+
+    position: relative;
+
+    @include breakpoint($small-phone-only-up) {
+      @include with-layout(12 split inside no-gutters) {
+        @include span(6);
+      }
+    }
+  }
+
+  &__gallery-img {
+    display: block;
+    width: 100%;
+  }
+
+  &__gallery-desc {
+    @extend %transition;
+    @extend %flex-center;
+    @extend %gradient-base;
+
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: #fff;
+
+    opacity: 0;
+
+    .s-work__gallery-item:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__gallery-ico {
+    margin-bottom: em(18px);
+    font-size: rem(16px);
+  }
+
+  &__gallery-title {
+    margin: 0 0 em(9px, 17px);
+
+    font-size: rem(17px);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__gallery-text {
+    font-family: $font-family-text;
+    font-size: rem(14px);
+    font-style: italic;
+  }
+}

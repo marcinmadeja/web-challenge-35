@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+
+
+html {
+  font-size: 100%;
+  font-family: $font-family-main;
+  box-sizing: border-box;
+
+  @include breakpoint($desktop-small) {
+    font-size: 85%;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: inherit;
+  text-decoration: none;
+  
+  &:hover, 
+  &:active, 
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+body {
+  min-height:  2000px;
+}
+
+p {
+  margin-top: 0;
+}
+
+.page-container {
+  @include container;
+  @include clearfix;
+
+  box-sizing: content-box;
+  padding-left: em(25px);
+  padding-right: em(25px);
+}
+

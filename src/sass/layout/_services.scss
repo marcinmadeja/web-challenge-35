@@ -1,0 +1,66 @@
+.s-service {
+  &__list {
+    @extend .page-container;
+
+    margin-top: em(65px);
+  }
+
+  &__item {
+    @include clearfix;
+
+    margin-bottom: em(44px);
+    padding-bottom: em(44px);
+    padding-left: em(35px);
+    border-bottom: 1px solid $color-border-light;
+
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }     
+
+    @include breakpoint($between-phone-table) {
+      @include with-layout(12 inside) {
+        @include span(6);
+      }
+
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        border-bottom: none;
+      }      
+    }
+
+    @include breakpoint($tablet-landscape-up) {
+      @include with-layout(12 inside) {
+        @include span(4);
+      }
+
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__img-wrap {
+    float: left;
+    padding-top: 2px;
+  }
+
+
+  &__text-wrap {
+    padding-left: em(60px);
+  }
+
+  &__title {
+    margin: 0 0 em(14px);
+
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: $font-color-lighter;
+    font-size: rem(14px);
+    line-height: 1.6;
+  }
+}

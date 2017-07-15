@@ -1,0 +1,102 @@
+.testi {
+  @extend .page-container;
+
+  &__list {
+      font-size: 75%;
+  }
+
+  &__item-wrap {
+    padding: 0 em(116px);
+
+    @include breakpoint($phone-only-up) {
+      @include flex-center;
+    }
+
+    @include breakpoint($phone-only) {
+      padding: 0 em(55px);
+    }
+  }
+
+  &__text-wrap--with-icon {
+    &::before {
+      content: '';
+      width: em(150px);
+      min-width: em(150px);
+      height: em(150px);      
+      background: url('../img/ico-testimonial.png') center center no-repeat;
+      border: 2px solid $font-color-brand;
+
+      @include breakpoint($phone-only-up) {
+        margin-right: em(60px);
+        display: inline-block;
+        vertical-align: middle;        
+      }
+
+      @include breakpoint($phone-only) {
+        display: block;
+        margin: 0 auto em(30px);
+      }
+    }
+  }
+
+  &__item {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__text {
+    color: $font-color-lighter;
+    font-family: $font-family-text;
+    font-size: em(23px);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  &_author {
+    font-family: $font-family-decorative;
+    font-size: rem(23px);
+    margin-top: em(10px, 23px);
+
+    @include breakpoint ($phone-only-up) {
+      &::before {
+        content: '';
+        width: em(60px);
+        height: 3px;
+        margin-right: em(13px, 23px);
+        background: $font-color-highliht;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__photo-wrap {
+    border-radius: 500px;
+    overflow: hidden;
+
+    text-align: center;
+    
+
+    @include breakpoint($phone-only-up) {
+      height: em(208px);      
+      margin-right: em(38px);
+      min-width: em(208px);
+    }
+  }
+
+  &__photo {
+    width: 100%;
+
+    @include breakpoint($phone-only) {
+      margin: 0 auto em(35px);
+      max-width: 90%;
+      width: auto;
+    }    
+  }
+
+  &--with-photo {
+    margin-bottom: em(150px);
+  }
+}

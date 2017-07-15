@@ -1,0 +1,133 @@
+.h-slider {
+  &__item {
+    @extend %flex-center;
+    height: 1000px;
+    height: 100vh;
+
+    background: center center/cover;
+
+    color: $font-color-light;
+    text-align: center;
+
+    .slick-initialized & {
+      @extend %flex-center;
+    }
+  }
+
+  &__title-deco {
+    margin: 0 0 em(20px, 70px);
+    font-family: $font-family-decorative;
+    font-size: rem(70px);
+
+    @include breakpoint(max-height 780px) {
+      font-size: rem(50px);
+    }
+
+    @include breakpoint($desktop-small) {
+      font-size: rem(40px);
+    }
+
+    @include breakpoint($tablet-portrait) {
+      font-size: rem(33px);
+    }
+  }
+
+  &__title {
+    margin: 0 0 em(50px, 149px);
+    font-size: rem(149px);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+
+    &::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      display: block;
+      margin: em(74px, 149px) auto 0;
+    }
+
+    @include breakpoint(max-height 780px) {
+      font-size: rem(100px);
+    }
+
+    @include breakpoint($desktop-small) {
+      font-size: rem(75px);
+    }
+
+    @include breakpoint($tablet-portrait) {
+      font-size: rem(55px);
+    }    
+  }
+
+  &__btn {
+    @extend %reset-btn;
+
+    padding: 8px 29px;
+    border: 3px solid #fff;
+
+    color: $font-color-light;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.slick-dots {
+  @include container;
+  @extend %reset-list;
+
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  li {
+    @include span(3);
+
+    &:last-child {
+      @include span(3 last);
+    }
+  }
+
+  button {
+    @extend %reset-btn;
+  }
+}
+
+.h-slider__progress {
+  background: #fff;
+  height: 3px;
+
+  display: flex;
+  flex: 10;
+  position: relative;
+}
+
+.h-slider__progress-filled {
+  @extend %transition;
+
+  width: 50%;
+  background: $font-color-highliht;  
+  flex: 0;
+
+  .slick-active & {
+    flex-basis: 25%;
+  }  
+}
+
+.h-slider__dots-text {
+  padding: em(22px, 15px) 0 em(25px, 15px);
+
+  color: #fff;
+  font-size: rem(15px);
+  text-transform: uppercase;
+
+  strong {
+    font-size: 21px;
+  }
+}

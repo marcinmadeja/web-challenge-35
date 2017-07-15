@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  '~normalize-css/normalize',
+  '~breakpoint-sass/stylesheets/breakpoint',
+  '~susy/sass/susy',
+  '~perfect-scrollbar/dist/css/perfect-scrollbar.min.css',
+  '~slick-carousel/slick/slick.css';
+
+
+// 3. Base stuff
+@import
+  'base/fonts',
+  'base/typography',
+  'base/helpers',
+  'base/base';
+
+// 4. Layout-related sections
+@import
+  'layout/navigation',
+  'layout/form',
+  'layout/forms',
+  'layout/slider',
+  'layout/header',
+  'layout/sections',
+  'layout/main-slider',
+  'layout/about-us',
+  'layout/numbers',
+  'layout/services',
+  'layout/design',
+  'layout/wwd',
+  'layout/testimonials',
+  'layout/team',
+  'layout/logos',
+  'layout/work',
+  'layout/clients',
+  'layout/blog',
+  'layout/map',
+  'layout/footer',
+  'layout/blog-footer',
+  'layout/footer-instagram';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+
+// 7. Themes
+@import
+  'themes/default';

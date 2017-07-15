@@ -1,0 +1,45 @@
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 24px;
+  left: 0;
+  z-index: 1;
+
+  &__container {
+    @extend .page-container;
+    display: flex;
+    align-items: center;
+  }
+
+  &.is_fixed {
+    height: 54px;
+    background: rgba( $font-color-highliht, .9 );
+    padding: 10px 0;
+
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+
+  &:hover {
+    color: $font-color-highliht-second;
+  }
+}
+
+.head-actions__icon {
+  @extend %reset-btn;
+
+  margin-left: 15px;
+
+  color: #fff;
+  font-size: 17px;
+
+  &:hover {
+    color: $font-color-highliht-second;
+  }
+}

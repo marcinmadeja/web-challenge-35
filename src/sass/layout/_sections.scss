@@ -1,0 +1,44 @@
+.l-section {
+  padding: em(92px) 0 em(108px);
+
+  &__header {
+    margin: 0 0 em(47px);
+    text-align: center;
+  }
+
+  &__title-deco {
+    margin: 0 0 em(18px, 22px);
+
+    font-family: $font-family-decorative;
+    font-size: rem(22px);
+    font-weight: 100;
+    letter-spacing: 0.8px;
+    line-height: 1;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: rem(30px);
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      margin: em(31px, 30px) auto 0;
+      display: block;
+      background: $font-color-highliht;
+    }
+  }
+
+  &__text {
+    @extend .page-container;
+
+    margin-bottom: em(95px);
+    color: $font-color-lighter;
+    line-height: 1.7;
+    font-size: rem(14px);
+    text-align: center;
+  }
+}

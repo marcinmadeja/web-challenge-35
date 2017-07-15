@@ -1,0 +1,41 @@
+.slick-arrow {
+  @extend %reset-btn;
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+
+  transform: translate(0, -50%);
+
+  font-size: 0;
+  color: transparent;
+
+  &::before {
+    @extend %transition;
+    color: $font-color-lighter;
+  }
+
+  &:hover::before {
+    color: $font-color-highliht;
+  }
+}
+
+.slick-prev {
+  left: 0;
+
+  &::before {
+    @include fontAwesome('\F104');
+    font-size: 35px;
+  }
+}
+
+.slick-next {
+  right: 0;
+
+  &::before {
+    @include fontAwesome('\F105');
+    font-size: 35px;
+  }
+}

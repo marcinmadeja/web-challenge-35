@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  @extend %reset-btn;
+  @extend %transition;
+
+  background: $font-color-brand;
+  border: 1px solid $font-color-brand;
+  display: inline-block;
+  min-width: 150px;
+  max-width: 100%;
+  padding: 10px 20px;
+  vertical-align: middle;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $font-color-highliht;
+    border: 1px solid $font-color-highliht;    
+  }
+}

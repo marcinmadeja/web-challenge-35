@@ -1,0 +1,62 @@
+.s-numbers {
+  background: $font-color-brand;
+
+  @include breakpoint($tablet-landscape) {
+      .page-container {
+        padding: 0;
+      }
+  }
+
+  &__item {
+    @include with-layout(10 split inside) {
+      @include span(2);
+    }
+    @extend %flex-center;
+    flex-direction: column;
+
+    height: rem(270px);
+
+    color: #fff;
+    text-align: center;
+
+    @include breakpoint($tablet-landscape-up) {
+      border-left: 1px solid #b5eae2;   
+
+      &:last-child {
+        @include with-layout(10 split inside) {
+          @include span(2 last);
+        }
+
+        border-right: 1px solid #b5eae2;
+      }
+    }
+
+    @include breakpoint($tablet-landscape) {
+      @include span(12);
+
+      height: auto;
+      padding: 10px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #b5eae2;
+      }
+    }
+  }
+
+
+  &__value {
+    margin: 0 0 em(14px, 72px);
+    font-size: rem(72px);
+    font-weight: 900;
+    line-height: 1;
+
+    @include breakpoint($tablet-landscape) {
+      font-size: rem(50px);
+    }
+  }
+
+  &__title {
+    font-size: rem(14px);
+    text-transform: uppercase;
+  }
+}

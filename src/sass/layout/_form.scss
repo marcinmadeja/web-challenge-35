@@ -1,0 +1,43 @@
+.f-input {
+    border: 1px solid $color-border-light;
+    display: inline-block;
+    height: em(38px);
+    width: em(240px);
+    max-width: 100%;
+    padding: 0 em(17px);
+    vertical-align: middle;
+    
+    color: $font-color;
+    font-size: rem(17px);
+
+    @include on-event{
+      outline-color: $font-color-brand;
+    };
+
+    @include placeholder {
+      color: $font-color-lighter;
+      font-family: $font-family-text;
+      font-size: rem(17px);
+      font-style: italic;
+      font-weight: 300;
+    }
+}
+
+.newsletter-short__form {
+  @include breakpoint($desktop-small-up) {
+    @include flex-vertical-align;
+  }
+
+  @include breakpoint($between-desktop-small-phone) {
+    @include flex-center;
+  }
+
+  @include breakpoint($phone-only) {
+    .f-input,
+    .btn {
+      display: block;
+      margin-bottom: em(20px);
+      width: 100%;
+    }
+  }
+}

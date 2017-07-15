@@ -1,0 +1,120 @@
+.s-wwd {
+
+  &__main {
+    @extend .page-container;
+  }
+
+  &__img-wrap {
+    @include breakpoint($tablet-landscape-up) {
+      width: 47.5%;
+      margin-right: 2.5%;
+      float: left;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__list {
+    margin-top: em(50px);
+
+    @include breakpoint($tablet-landscape-up) {
+      width: 50%;
+      margin-top: 0;
+      float: right;
+    }
+  }
+
+  &__item {
+    border: 1px solid $color-border-light;
+    margin-bottom: 10px;
+  }
+
+  &__item-header {
+    align-items: center;
+    display: flex;
+
+    border-bottom: 1px solid transparent;
+    padding: em(15px) em(21px);
+
+    cursor: pointer;
+
+    .is_active & {
+      border-bottom-color: $color-border-light;
+    }
+
+    &::after {
+      @include fontAwesome('\F107');
+      @extend %transition;
+
+      display: inline-block;
+      margin-left: auto;
+
+      font-size: 33px;
+      color: $font-color-lighter;
+    }
+
+    &:hover::after,
+    .is_active &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__item-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__item-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 11px;
+
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    height: 166px;
+    padding: em(16px) em(50px) em(16px) em(21px);
+    display: none;
+
+    position: relative;
+
+    color: $font-color-lighter;
+    line-height: 1.6;
+    font-family: $font-family-text;
+    font-size: rem(15px);
+    font-style: italic;
+
+    .is_active & {
+      display: block;
+    }
+  }
+}
+
+.ps>.ps__scrollbar-y-rail>.ps__scrollbar-y,
+.ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y,
+.ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y {
+  background-color: $font-color-brand!important;
+}
+
+.ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail {
+  background-color: transparent;
+}
+
+.ps>.ps__scrollbar-y-rail>.ps__scrollbar-y {
+  right: 25px;
+}
+
+.ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y {
+  width: 6px;
+}
+
+.ps:hover>.ps__scrollbar-x-rail,
+.ps:hover>.ps__scrollbar-y-rail  {
+  opacity: 1;
+}
