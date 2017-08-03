@@ -1,1 +1,1 @@
-https://jonelet.github.io/web-challenge-35/
+https://marcinmadeja.github.io/web-challenge-35/
